@@ -45,7 +45,7 @@ def execute_python_code(code: str) -> dict:
 
     try:
         exec(code)  # Actually runs the code string
-        output = sys.stdout.getvalue().strip()  # Grab everything that was printed
+        output = sys.stdout.getvalue()  # Grab everything that was printed
         return {"success": True, "output": output}
 
     except Exception:
